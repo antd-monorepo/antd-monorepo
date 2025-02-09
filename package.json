@@ -1,0 +1,41 @@
+{
+  "name": "antd-monorepo",
+  "version": "1.0.0",
+  "description": "ant design monorepo",
+  "scripts": {
+    "antd": "pnpm --filter antd",
+    "select": "pnpm --filter rc-select",
+    "storybook": "pnpm --filter storybook",
+    "compile": "pnpm --filter antd run compile",
+    "compile:rc": "pnpm --filter rc-* run compile",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "pnpm recursive exec --filter . rm -rf dist",
+    "host__vite-plugin-federation": "pnpm --filter host__vite-plugin-federation",
+    "remote__vite-plugin-federation": "pnpm --filter remote__vite-plugin-federation",
+    "host__module-federation": "pnpm --filter host__module-federation",
+    "remote__module-federation": "pnpm --filter remote__module-federation",
+    "rm:node_modules": "pnpm -r exec rm -rf node_modules && rm -rf node_modules && rm pnpm-lock.yaml",
+    "rebuild1": "pnpm -r rebuild"
+  },
+  "keywords": [],
+  "author": "Hyeong-Jin Yong",
+  "license": "ISC",
+  "resolutions": {
+    "nwsapi": "2.2.13"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@ant-design/tools",
+      "@biomejs/biome",
+      "@parcel/watcher",
+      "@swc/core",
+      "core-js",
+      "core-js-pure",
+      "es5-ext",
+      "esbuild",
+      "fsevents",
+      "puppeteer",
+      "sharp"
+    ]
+  }
+}
